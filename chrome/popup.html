@@ -81,6 +81,9 @@
         border-bottom-width: 2px;
         color: #ffffff;
       }
+      .report{
+        visibility: hidden;
+      }
     </style>
     <title>WaPolls</title>
   </head>
@@ -114,6 +117,7 @@
             id="days"
             class="days"
           >
+            <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -126,10 +130,11 @@
         <div class="hours">
           <label for="">Hours</label>
           <select
-            name=""
+            name="hours"
             id="hours"
             class="leading-tight text-md px-1 py-2 border-b-2 text-white"
           >
+            <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -162,10 +167,6 @@
             id="minutes"
             class="leading-tight text-md px-1 py-2 border-b-2 text-white"
           >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
             <option value="7">7</option>
@@ -226,6 +227,10 @@
 
       <button class="create" disabled>Create Poll</button>
     </form>
+
+    <div class="report">
+      <h1>Copy and paste bro</h1>
+    </div>
 
     <script src="popup.js"></script>
   </body>
