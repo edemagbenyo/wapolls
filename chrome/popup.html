@@ -23,6 +23,9 @@
         border: 1px solid #00bfa5;
         padding: 1em;
       }
+      button{
+        outline: none;
+      }
       .signage {
         color: #ffffff;
         text-align: center;
@@ -42,13 +45,22 @@
       .duration {
         display: flex;
         justify-content: space-between;
-        margin-top: 1em;
+        margin: 1em 0;
+
       }
       .duration label{
         color: #FFFFFF;
       }
       .duration div{
         width: 25%;
+      }
+      .choice{
+        width: 100%;
+        font-size: 1em;
+        margin:.5em 0;
+        padding: .5em .25em;
+        border-bottom-width: 2px ;
+        color: #FFFFFF;
       }
     </style>
     <title>WaPolls</title>
@@ -73,23 +85,23 @@
       <div class="choices">
         <input
           type="text"
-          class="w-full leading-tight text-md my-2 px-1 py-2 border-b-2 text-white"
+          class="choice"
           placeholder="Choice 1"
         />
         <input
           type="text"
-          class="w-full leading-tight text-md my-2 px-1 py-2 border-b-2 text-white"
+          class="choice"
           placeholder="Choice 2"
         />
-        <button class="choice_btn">Add Choice</button>
       </div>
+      <button class="choice_btn">Add Choice</button>
       <div class="duration">
         <div class="days">
           <label for="">Days</label>
           <select
             name=""
             id="days"
-            class="leading-tight text-md my-2 px-1 py-2 border-b-2 text-white"
+            class="leading-tight text-md px-1 py-2 border-b-2 text-white"
           >
             <option value="1">1</option>
             <option value="2">2</option>
@@ -203,5 +215,7 @@
 
       <button class="save">Create Poll</button>
     </form>
+
+    <script src="popup.js"></script>
   </body>
 </html>
