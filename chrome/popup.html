@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="tailwind.min.css" rel="stylesheet" />
+    <link href="reset.css" rel="stylesheet" />
     <style>
       body {
         width: 300px;
@@ -14,8 +14,15 @@
       select,
       textarea {
         border-bottom: 1px solid #00bfa5;
-
+        inset: none;
         background-color: transparent;
+        outline: none;
+        color: #ffffff;
+        padding: 0.5em 0.25em;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
         outline: none;
       }
       form {
@@ -23,8 +30,17 @@
         border: 1px solid #00bfa5;
         padding: 1em;
       }
-      button{
+      button {
         outline: none;
+      }
+      .question, .name{
+        
+        width: 100%;
+        margin:1em 0;
+      }
+      .question{
+        width: 100%;
+        margin:1em 0;
       }
       .signage {
         color: #ffffff;
@@ -46,21 +62,20 @@
         display: flex;
         justify-content: space-between;
         margin: 1em 0;
-
       }
-      .duration label{
-        color: #FFFFFF;
+      .duration label {
+        color: #ffffff;
       }
-      .duration div{
+      .duration div {
         width: 25%;
       }
-      .choice{
+      .choice {
         width: 100%;
         font-size: 1em;
-        margin:.5em 0;
-        padding: .5em .25em;
-        border-bottom-width: 2px ;
-        color: #FFFFFF;
+        margin: 0.5em 0;
+        padding: 0.5em 0.25em;
+        border-bottom-width: 2px;
+        color: #ffffff;
       }
     </style>
     <title>WaPolls</title>
@@ -71,28 +86,20 @@
       <input
         type="text"
         id="name"
-        class="w-full leading-tight text-md px-1 py-2 border-b-2 text-white"
+        class="name"
         placeholder="Enter your name(Optional)"
       />
       <textarea
         name="question"
         id="question"
         cols="10"
-        class="w-full my-2 leading-tight text-md text-white px-1 py-2 border-b-2 focus:outline-none"
+        class="question"
         placeholder="Ask question..."
       ></textarea>
 
       <div class="choices">
-        <input
-          type="text"
-          class="choice"
-          placeholder="Choice 1"
-        />
-        <input
-          type="text"
-          class="choice"
-          placeholder="Choice 2"
-        />
+        <input type="text" class="choice" placeholder="Choice 1" />
+        <input type="text" class="choice" placeholder="Choice 2" />
       </div>
       <button class="choice_btn">Add Choice</button>
       <div class="duration">
@@ -101,7 +108,7 @@
           <select
             name=""
             id="days"
-            class="leading-tight text-md px-1 py-2 border-b-2 text-white"
+            class="days"
           >
             <option value="1">1</option>
             <option value="2">2</option>
