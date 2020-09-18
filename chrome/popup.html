@@ -49,14 +49,18 @@
         font-size: 1.3em;
       }
       .choice_btn,
-      .save {
+      .create {
         background-color: #00bfa5;
         color: #ffffff;
         padding: 5px;
         border-radius: 5px;
       }
-      .save {
+      .create {
         width: 100%;
+      }
+      .create:disabled{
+        background-color: rgba(0, 191, 165, .5);
+        cursor: default;
       }
       .duration {
         display: flex;
@@ -220,7 +224,7 @@
         </div>
       </div>
 
-      <button class="save">Create Poll</button>
+      <button class="create" disabled>Create Poll</button>
     </form>
 
     <script src="popup.js"></script>
